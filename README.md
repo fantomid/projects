@@ -1,1 +1,1 @@
-# Projects distributed by languages or frameworks
+# Projects arranged by languages or frameworks

@@ -6,6 +6,7 @@
 	<app min-swf-version="12.0" />
 	
 	<source path="../.."/>
+	<source path="../../wipeout"/>
 	
 	<window background="#000000" fps="60" />
 	<window width="1280" height="800" unless="mobile" />

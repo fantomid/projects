@@ -1,5 +1,6 @@
 -lib heaps
 -cp ../..
+-cp ../../wipeout
 -js ::name::.js
 -main ::main::
 ::params::

@@ -1,7 +1,9 @@
+import wipeout.*;
 import h3d.scene.*;
 
 class WipeoutTitle extends hxd.App {
 
+	var wloader : WipeoutLoader;
 	var time : Float = 0.;
 	var obj1 : Mesh;
 	var obj2 : Mesh;
@@ -23,8 +25,10 @@ class WipeoutTitle extends hxd.App {
 		// add texture coordinates
 		prim.addUVs();
 
-		// accesss the logo resource and convert it to a texture
-		var tex = hxd.Res.hxlogo.toTexture();
+		// accesss the title image and convert it to a texture
+		var wloader : wipeout.WipeoutLoader = cast(hxd.Res.loader, wipeout.WipeoutLoader);
+		var image = wloader.loadTimImage("WIPEOUT/TEXTURES/WIPTITLE.TIM");
+		var tex = image.toTexture();
 
 		// create a material with this texture
 		var mat = new h3d.mat.MeshMaterial(tex);
@@ -71,8 +75,8 @@ class WipeoutTitle extends hxd.App {
 
 	static function main() {
 
-		// initialize embeded ressources
-		hxd.Res.initEmbed();
+		// initialize pak ressources
+		wipeout.WipeoutRes.initPak();
 
 		// start the application
 		new WipeoutTitle();

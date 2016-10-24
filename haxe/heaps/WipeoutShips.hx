@@ -35,6 +35,9 @@ class WipeoutShips extends hxd.App {
 		var cmpImages = wloader.loadCmpImages("WIPEOUT/COMMON/ALLSH.CMP");
 		var tex01 = cmpImages.toTexture(1);
 
+		var models = wloader.loadModels("WIPEOUT/COMMON/ALLSH.PRM", "WIPEOUT/COMMON/ALLSH.CMP");
+		var model = models.toModel(1);
+
 		// create a material with this texture
 		var mat = new h3d.mat.MeshMaterial(tex);
 

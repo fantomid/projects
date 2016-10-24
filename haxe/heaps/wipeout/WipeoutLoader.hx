@@ -30,4 +30,13 @@ class WipeoutLoader extends hxd.res.Loader {
 		}
 		return i;
 	}
+
+	public function loadModels( pathObjects : String, pathImages : String ) : Models {
+		var i : Models = cache.get(pathObjects);
+		if( i == null ) {
+			i = new Models(fs.get(pathObjects), fs.get(pathImages));
+			cache.set(pathObjects, i);
+		}
+		return i;
+	}
 }

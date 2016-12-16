@@ -26,7 +26,7 @@ class Models extends hxd.res.Resource {
 
     private function ObjectToModel(index : Int) : Model {
         var object = objects.toObject(index);
-
-        return null;
+        modelArray[index] = object;
+        return modelArray[index];
     }
 }
